@@ -46,6 +46,7 @@ You have to work again with the data on opposition parties in national European 
 
 **What is the mean share of opposed votes (`conflict_p`) across all opposition parties and countries (in percent and rounded to two meaningful (integer) digits (e.g., 0.23, 4.5, 13))?**
 
+
 ```{r mean_conflict_sol, echo = FALSE, eval=FALSE}
 mean(df_opposition$conflict_p) %>% round(2)*100
 ```
@@ -172,7 +173,7 @@ out_multivar <- lm(conflict_p ~ seatshare + abs_lrdiff + ge + inst_power +
 ```
 
 <div id="predict-hint">
-**Hint:** The `predict()` function might be helpful for this task. Make sure you only set continuous variables to their mean. Categorical/dummy variables should be set to their median value.
+**Hint:** The `predict()` function might be helpful for this task. Make sure you only set continuous variables to their mean when specifying the scenarios. Categorical/dummy variables should be set to their median value.
 </div>
 
 
