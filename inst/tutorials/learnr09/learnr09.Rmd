@@ -84,13 +84,10 @@ df_opposition %>%
 
 ```
 
-<div id="cntry_conflict-hint">
-**Hint:** It might be helpful to store the average value in a separate object first. Did you calculate the average opposition scores for *countries* (not parties)?
-</div>
-
 ```{r cntry_conflict_q, echo = FALSE}
 question_text("Enter the number of countries with an average opposition score above the mean here:",
   answer("7", correct = T),
+  answer("24", message = "You calculated the average opposition scores for parties (and not countries)."),
   allow_retry = T
 )
 ```
