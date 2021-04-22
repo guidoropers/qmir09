@@ -28,7 +28,7 @@ As discussed in class, one of the main reasons for multiple regression is to add
 
 **Choose the correct statement:**
 
-```{r assumptions_q1, echo = FALSE}
+```{r assumptions_ovb, echo = FALSE}
 question(sprintf("Is our estimate of $\\beta_1$ biased, if we fail to include a variable that affects our outcome, $y$, but is not correlated with out variable of interest, $x_1$?"),
   answer("Yes.", message = "A causal interpretation of $\\beta_1$ is based on the zero conditional mean assumption according to which the unobserved factors and the variable of interest, $x_1$, need to be uncorrelated. This assumption is holding in the described scenario."),
   answer("No.", correct = T, message = "Correct. Omitted variable bias only occurs if the omitted variable correlates with both our outcome, $y$, and the variable of interest, $x_1$."),
@@ -214,11 +214,11 @@ question("What does the estimated regression model tell us about the relationshi
 
 It's important to keep in mind what we are assuming about the models that we run on our data to **infer** what is going on in the real world.
 
-```{r assumptions_q1, echo = FALSE}
-question("Which key assumption is required to interpret the relationship from a linear model as causal?",
+```{r assumptions_causal, echo = FALSE}
+question("Which key assumption is required to interpret an estimated relationship between an explanatory variable and the dependent variable as causal?",
   answer("Unobserved factors have an average of zero and do not depend on the explanatory variable.", correct = T),
   answer("The parameters are linear.", message = "This is an important assumption of the  'linear' model that we are building, however, not sufficient for a causal interpretation of the estimates."),
-  answer("There is a correlation between the dependent and independent variables.", message = "While correlation is a necessary condition to find a causal effect, it is certainly not sufficient."),
+  answer("There is a correlation between the dependent and independent variable.", message = "While correlation is a necessary condition to find a causal effect, it is certainly not sufficient."),
   answer("There is no measurement error in the dependent variable.", message = "A nice feature of regression analysis is that (random) measurement error in the dependent variable does not bias the regression estimates because it does not change the average values of a variable."),
   random_answer_order = TRUE,
   allow_retry = T,
