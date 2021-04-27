@@ -197,7 +197,7 @@ Usually, we should be very carefully interpreting control variables by themselve
 
 Recall how the explanatory variable of interest is coded: It is a dummy variable coded as 1 for surplus coalitions and 0 for minimal-winning coalitions.
 
-*Note that more than one answer can be correct. You can use the following code chunk to re-run the model. Alternatively, the correct regression output is also already stored in an object called `out_multivar`.*
+*More than one answer can be correct. You can use the following code chunk to re-run the model. Alternatively, the correct regression output is also already stored in an object called `out_multivar`.*
 
 ```{r lm2, exercise=TRUE, exercise.setup = "predict-setup"}
 
@@ -235,11 +235,11 @@ question("Which key assumption is required to interpret an estimated relationshi
 ## Submit
 
 ```{r context="server"}
-learnrhash::encoder_logic()
+learnrhash::encoder_logic(strip_output = TRUE)
 ```
 
 ```{r encode, echo=FALSE}
-learnrhash::encoder_ui(default_ui(url = "someURL"))
+learnrhash::encoder_ui(default_ui(url = "https://ilias.uni-mannheim.de/goto.php?target=svy_1133175&client_id=ILIAS"))
 ```
 
 
